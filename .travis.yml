@@ -1,0 +1,15 @@
+sudo: required
+
+language: go
+
+services:
+- docker
+
+go:
+- 1.11.2
+
+install: true
+
+script:
+- make
+
