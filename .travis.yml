@@ -13,3 +13,13 @@ install: true
 script:
 - make
 
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: VShDBw76Jdi3dJPMUbWQyKNRvY7IMsYAXKtNWF96kRakNBf+6xH3idYzNrgiQyLuJd38IQOQkB2bO2rFuVjHUAyYdx5Mmsmp42R4WK6138KaJ8gIs/zmhxwgct9IXAghkVI+SPKZLYMB11CleyOCM6dYiWN1PdQRaeDwvm/4ecxoHzNDj8G/J/GfgNcuz/7rE1wgfyPPfBn4xy4U0tJEGcBK4ViDAQkj9KHkH2uPjqRbvuSi/5tUnhmvGq6Y+tDIQnj5kZWuS/3zqeGgpvLOTUsIcHsMs8/YHy+Gsf8RCDwUrL/aUDFrs7OMRkMaPKbMka0tf8PT/XWKAQveC25m0YLMCA3gAomFwjImSbkpDe5Gc6SxbMwKWZSpAeuYi9OZbYnooIc4KPxA4RLEZY+69EeIPx3/TcJJwRFObBVT275IWLUFp/iSiGmQAzxwjKcSKxKnYxr1BslmXtBS9/B8cbbJoICyyfLtUous7/8Jswb3u90+nygV09a6jB7g+oqbMejsSMlWTTFbHwv3m0dwAzWbRjpts1oRD8ORMNE1mP4pRxRgW4duEp3cJaUbiyF7UAQWFDXKzeiGGgIsvnX0NTTvY7B/sTdwgx80DiL6tQpD4Jachg/m9C0RY3RagKpB1+CeAdpJ+oBoerCMLdhUH+xabxei+V+Q9xcdfLVwDFU=
+  file: "$TRAVIS_BUILD_DIR/freezer"
+  on:
+    tags: true
+    repo: darxkies/freezer
+    branch: travis
